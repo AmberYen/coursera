@@ -5,7 +5,10 @@ void swap(int *a, int *b);
 int main(){
 
 
-	int list[6]={1,2,3,4,5,6},i=0,s_even,b_odd;
+	int list[6],i=0,s_even,b_odd;
+
+	for(i = 0; i < 6; i++)
+		cin >> list[i];
 
 	bubble_sort(list);
 
@@ -28,8 +31,11 @@ int main(){
 		}	
  	}
 
- 	cout << b_odd << " " << s_even << endl;
- 	cout << abs(b_odd-s_even) << endl;
+ 
+ 	if(b_odd > s_even)
+ 		cout << b_odd - s_even << endl;
+ 	else
+ 		cout << s_even - b_odd << endl;
 
 }
 
