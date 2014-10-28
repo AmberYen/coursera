@@ -2,6 +2,7 @@
 using namespace std;
 void bubble_sort(int *list);
 void swap(int *a, int *b);
+
 int main(){
 
 
@@ -12,6 +13,8 @@ int main(){
 
 	bubble_sort(list);
 
+	i = 0;
+	
 	while(i < 6)
 	{
 		if(list[i] % 2 == 0)
@@ -30,12 +33,13 @@ int main(){
 			break;
 		}	
  	}
-
  
  	if(b_odd > s_even)
  		cout << b_odd - s_even << endl;
  	else
  		cout << s_even - b_odd << endl;
+
+	return 0;
 
 }
 
