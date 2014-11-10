@@ -3,19 +3,23 @@ using namespace std;
 int main(){
 
 	int n,tmp,i,biketime= 50;
-	float btime,wtime;
-	cin >> n;
-
-    //because 100 / 1.2 > 100 / 3.0 + 50
-    //so the distance large than 100 should use bike 
+	double btime,wtime;
+	double e = 1e-8;
+	cin >> n; 
 
 	for(i = 0;i < n;i++){
 		cin >> tmp;
 
-		if(tmp > 100)
-			cout << "Bike" << endl;
-		else
-			cout << "Walk" << endl;
+		btime = tmp / 3.0 + 50;
+		wtime = tmp / 1.2;
+
+		if(btime - wtime > e){
+		    cout << "Walk\n";
+		}else if (btime - wtime < -e){
+		    cout << "Bike\n";
+		}else{
+		    cout << "All\n";
+		}
 	}
 
 	return 0;
