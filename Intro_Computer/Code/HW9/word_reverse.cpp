@@ -4,7 +4,7 @@ void word_reverse(char *word,int Index,int End);
 int main(){
 
 	char word[500] = {'\0'};
-	int i=0,len=0,nextIndex;
+	int i=0,len=0,nextIndex = 0;
 
 	while(cin.getline(word,500)){
 
@@ -13,7 +13,7 @@ int main(){
 
 		for(int i = 0;i < len; i++){
 			if(word[i+1] == ' '){
-				word_reverse(word,0,i+1);
+				word_reverse(word,nextIndex,i+1);
 				nextIndex = i+2;
 				cout << " ";
 			}
