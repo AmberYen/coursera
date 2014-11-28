@@ -19,7 +19,7 @@ int main()
                     for (; len>0; i--,len--)
                         cout << a[i-1];
                     i = i + x; // the value of i need to go back after this for recycle
-                    cout <<a[i];
+                    cout << " ";
                     len = 0;
             }
 
@@ -29,6 +29,11 @@ int main()
     {
         for (int j = i; j > space_postion+1; j--)
             cout << a[j-1];
+    }
+    if (a[i] == '\0'&&i==p)//if there is only one word,output this word
+    {
+        for (int j = i; j > 0; j--)
+            cout << a[j - 1];
     }
   
     return 0;
